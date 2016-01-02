@@ -1,0 +1,22 @@
+<section class="row background">
+	<div class="col-md-8">
+		<section class="part">
+			<h1>Contributors</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</section>
+
+		<% @users.each do |user| %>
+			<section class="part">
+			<h2><%= link_to  user.first_name + ' ' + user.last_name, user_path(user) %> <%= '@' + user.username %></h2>
+			<h5>Favorite Song: <%= user.favorite_song %></h5>
+			</section>
+		<% end %>
+		
+		<section class="part">
+		<%= link_to '[ Log In ]', new_user_path %>
+		<%= link_to '[ Sign Up ]', new_user_path %>
+		</section>
+	</div> 
+
+	<%= render 'layouts/sidebar' %>
+</section>

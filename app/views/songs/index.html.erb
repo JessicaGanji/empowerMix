@@ -1,0 +1,105 @@
+<section class="row index">
+	<div class="col-md-12">
+
+	</div>
+</section>
+
+<section class="row breakdown">
+	<div class="col-md-4">
+	<img src="#">
+	<h2>Listen</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+
+	<div class="col-md-4">
+	<img src="#">
+	<h2>Contribute</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+
+	<div class="col-md-4">
+	<img src="#">
+	<h2>Empower</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+</section>
+
+<section class="slider">
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+	  </ol>
+	  <div class="carousel-inner" role="listbox">
+	    <div class="carousel-item active">
+	      <img src="/assets/slider01.jpg" alt="First slide">
+	      <div class="carousel-caption">
+		    <h3>Hello</h3>
+		    <p>Hello</p>
+		  </div>
+	    </div>
+	    <div class="carousel-item">
+	      <img src="/assets/slider02.jpg" alt="Second slide">
+	      <div class="carousel-caption">
+		    <h3>Hello</h3>
+		    <p>Hello</p>
+		  </div>
+	    </div>
+	    <div class="carousel-item">
+	      <img src="/assets/slider03.jpg" alt="Third slide">
+	      <div class="carousel-caption">
+		    <h3>Hello</h3>
+		    <p>Hello</p>
+		  </div>
+	    </div>
+	    <div class="carousel-item">
+	      <img src="/assets/slider04.jpg" alt="Fourth slide">
+	      <div class="carousel-caption">
+		    <h3>Hello</h3>
+		    <p>Hello</p>
+		  </div>
+	    </div>
+	    <div class="carousel-item">
+	      <img src="/assets/slider05.jpg" alt="Fifth slide">
+	      <div class="carousel-caption">
+		    <h3>Hello</h3>
+		    <p>Hello</p>
+		  </div>
+	    </div>
+	  </div>
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	    <span class="icon-prev" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	    <span class="icon-next" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+</section>
+
+<section class="row blank">
+	<div class="col-md-12">
+		<h2>Music Library</h2>
+		<% @songs.each do |song| %>
+			<h3><%= song.year %> - 
+			<%= link_to song.title, view_song_path(song) %> 
+			by <%= song.artist %></h3>
+		<% end %>
+	</div>
+</section>
+
+<section class="row donate">
+	<div class="col-md-12">
+		<h2>Top Five Charities for Women</h2>
+		<h3><a href="">The United Nations Foundation’s Shot@Life campaign</a></h3>
+		<h3><a href="">Population Services International</a></h3>
+		<h3><a href="">Tostan</a></h3>
+		<h3><a href="">Population Services International</a></h3>
+		<h3><a href="">Girls Not Brides</a></h3>
+		<% link_to 'Read More', about_path %>
+	</div>
+</section>

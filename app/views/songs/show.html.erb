@@ -1,0 +1,41 @@
+<section class="row background">
+	<div class="col-md-8">	
+		<section class="part">
+			<h1><%= @song.title %> (<%= @song.year %>) - <%= @song.artist %></h2>
+		</section>
+
+		<section class="part">	
+			<h3>Link:</h3>
+			<p><a href="<%= @song.link %>"><%= @song.link %></a></p>
+			<p><iframe width="560" height="315" src="//www.youtube.com/embed/<%= @youtube_id %>" frameborder="0" allowfullscreen></iframe></p>
+		</section>
+
+		<section class="part">	
+			<h3>Description:</h3>
+			<p class="text"><%= @song.description %></p>
+		</section>
+
+		<section class="part">			
+			<h3>Lyrics:</h3>
+			<p class="text"><%= @song.lyrics %></p>
+		</section>
+
+		<section class="part">	
+			<h3>Genre:</h3>
+			<p><%= @song.genre %></p>
+		</section>
+
+		<% if current_user.id == @song.user.id %>
+			<section class="part">	
+				<%= link_to '[ Edit ]', user_song_path %> 
+				<%= link_to '[ Delete ]', destroy_song_path, method: :delete %> 
+				<%= link_to '[ Back to Profile ]', user_path( @song.user_id ) %>
+			</section>
+		<% else %>
+			<section class="part">	 
+				<%= link_to '[ Back to Profile ]', user_path( @song.user_id ) %>
+			</section>
+		<% end %>
+
+	</div> 
+</section>

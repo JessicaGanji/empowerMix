@@ -1,0 +1,26 @@
+<%= form_for [ @user, @song ] do |f| %>
+
+	<h3><%= f.label :title %></h3>
+	<%= f.text_field :title %>
+
+	<h3><%= f.label :artist %></h3>
+	<%= f.text_field :artist %>
+
+	<h3><%= f.label :year %></h3>
+	<%= f.number_field :year %>
+
+	<h3><%= f.label :genre %></h3>
+	<%= f.select :genre, options_for_select([[ @song.genre, "" ], "Top Stations", "Alternative", "Blues", "Brunch", "Christian and Gospel", "Classical", "Comedy", "Country", "Dance/Electronic", "Decades", "Dinner/Cooking", "Driving", "Easy Listening", "End of Year", "Family", "Focus", "Hip Hop/Rap", "Holiday", "Holiday Comedy", "Indian", "Indie", "Instrumentals", "Jazz", "Latin", "Love Songs", "Metal", "Mexico", "Musica Navidena", "Musica Romantica", "New Age", "Oldies", "Pandora Local", "Party", "Pop", "Puerto Rico", "R&B/Soul/Funk", "Reggae", "Rock", "Songwriters/Folk", "Soundtracks, TV and Showtunes", "Studying", "Today's Music", "Wake-Up", "Wind-Down", "Workout", "World"]) %>
+
+	<h3><%= f.label :link %></h3>
+	<%= f.url_field :link %>
+
+	<h3><%= f.label :description %></h3>
+	<%= f.text_area :description, class: 'text_box' %>
+
+	<h3><%= f.label :lyrics %></h3>
+	<%= f.text_area :lyrics, class: 'text_box' %>
+
+	<%= f.submit %>
+
+<% end %>

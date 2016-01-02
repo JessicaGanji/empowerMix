@@ -1,0 +1,9 @@
+<section class="row blank">
+	<div class="col-md-12">
+		<% @songs.each do |song| %>
+			<h3><%= song.year %> - 
+			<%= link_to song.title, view_song_path(song) %> 
+			by <%= song.artist %></h3>
+		<% end %>
+	</div>
+</section>

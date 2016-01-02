@@ -1,0 +1,67 @@
+<%= form_for @user do |f| %>
+
+	<section class='part'>
+	<h3><%= f.label :first_name %></h3>
+	<%= f.text_field :first_name, class: 'text_field' %>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :last_name %></h3>
+	<%= f.text_field :last_name, class: 'text_field' %>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :username %></h3>
+	<%= f.text_field :username, class: 'text_field' %>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :email %></h3>
+	<%= f.email_field :email, class: 'text_field' %>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :password %></h3>
+	<%= f.password_field :password, class: 'text_field' %>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :password_confirmation %></h3>
+	<%= f.password_field :password_confirmation, class: 'text_field' %>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :test, 'Are females awesome?' %></h3>
+	<%#= f.text_field :test, class: 'text_field' %>
+	<p> <%= f.radio_button :test, 'true' %> True </p>
+	<p> <%= f.radio_button :test, 'false' %> False </p>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :favorite_song %></h3>
+	<%= f.text_field :favorite_song, class: 'text_field' %>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :bio %></h3>
+	<%= f.text_area :bio, class: 'text_box' %>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :discover %></h3>
+	<%= f.text_field :discover, class: 'text_field' %>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :gender %></h3>
+	<%= f.text_field :gender, class: 'text_field' %>
+	</section>
+
+	<section class='part'>
+	<h3><%= f.label :date_of_birth %></h3>
+	<%= f.text_field :date_of_birth, class: 'text_field' %>
+	</section>
+
+	<%= f.submit %>
+
+<% end %>

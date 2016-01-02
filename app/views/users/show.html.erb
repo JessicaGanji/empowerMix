@@ -1,0 +1,30 @@
+<section class="row background">
+	<div class="col-md-8">	
+		<section class="part">
+			<h1><%= @user.first_name %> <%= @user.last_name %> <%= '@' + @user.username %></h2>
+			<p class= "text"><em><%= @user.bio %></em></p>
+			<p class= "text">Favorite Song: <%= @user.favorite_song %></p>
+			<p class= "text">Location: <%= @user.gender %></p>
+
+			<% if current_user.id == @user.id %>	
+				<%= link_to '[ Back ]', users_path %>
+				<%= link_to '[ Edit ]', edit_user_path %> 
+				<%= link_to '[ Delete ]', destroy_user_path, method: :delete %>
+			<% else %>	 
+				<%= link_to '[ Back to Contributors ]', users_path %>
+			<% end %>
+		</section>
+
+		<section class="part">
+			<h2>Contributions:</h2>
+			<% @user.songs.each do |song| %>
+				<h3><%= song.year %> - <%= link_to song.title, song_path( @user, song ) %> - <%= song.artist %></h3>
+			<% end %></p>
+
+			<% if current_user.id == @user.id %>	
+				<%= link_to '[ Submit a New Song ]', user_songs_path(@user) %> 
+			<% end %>
+
+		</section>
+	</div>	
+</section>	
