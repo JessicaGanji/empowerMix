@@ -4,25 +4,24 @@
 			<h1><%= @user.first_name %> <%= @user.last_name %> <%= '@' + @user.username %></h2>
 			<p class= "text">Bio: <em><%= @user.bio %></em></p>
 			<p>Favorite Song: <%= @user.favorite_song %></p>
-			<p>Location: <%= @user.gender %></p>
+			<p>Location: <%= @user.location %></p>
 			<p>Member since: <%= @user.created_at.strftime("%Y") %></p>
-
 		</section>
 
 		<section class="part">
 			<h2>Contributions:</h2>
 			<% @user.songs.each do |song| %>
-				<h3><%= song.year %> - <%= link_to song.title, song_path( @user, song ) %> - <%= song.artist %></h3>
-				<p> (<%= song.created_at %>)</p><br>
+				<h3><%= link_to song.title, song_path( @user, song ) %> by <%= song.artist %></h3>
+				<p> <%= song.created_at.strftime("%b %d, %Y") %></p><br>
 			<% end %></p>
 
-			<% if current_user.id == @user.id %>	
+			<% if @current_user == @user.id %>	
 				<%= link_to '[ Submit a New Song ]', user_songs_path(@user) %> 
 			<% end %>
 		</section>
 
 		<section class="part">
-			<% if current_user.id == @user.id %>	
+			<% if @current_user == @song %>	
 				<%= link_to '[ Edit ]', edit_user_path %> 
 				<%= link_to '[ Delete ]', destroy_user_path, method: :delete %>
 				<%= link_to '[ Back to Contributors ]', users_path %>

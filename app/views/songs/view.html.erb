@@ -22,7 +22,7 @@
 		</section>
 
 		<section class="part">
-			<% if current_user.id == @song.user_id %>
+			<% if @current_user == @user %>
 				<p>YouTube Link: <a href="<%= @song.link %>"><%= @song.link %></a></p>
 				<p>Updated at: <%= @user_id.updated_at %></p>	
 				<%= link_to '[ Edit ]', user_song_path(@song.user_id, @song.id) %> 
