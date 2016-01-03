@@ -3,14 +3,14 @@ class SongsController < ApplicationController
 	before_action :set_song, only:[:show, :view, :edit, :update, :destroy]
 
 	def index
-		@songs = Song.all.order( 'year DESC' )
+		@songs = Song.all.order( 'year DESC, title ASC' )
 	end
 
 	def about
 	end
 
 	def library
-		@songs = Song.all.order( 'year DESC' )
+		@songs = Song.all.order( 'year DESC, title ASC' )
 	end
 
 	def show
@@ -44,7 +44,7 @@ class SongsController < ApplicationController
 	def update
 		@user = User.find( params[:user_id] )
 		if @song.update_attributes( song_params )
-			redirect_to library_path
+			redirect_to view_song_path(@song.id)
 		else
 			render :edit
 		end

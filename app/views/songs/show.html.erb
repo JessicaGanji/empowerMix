@@ -2,6 +2,7 @@
 	<div class="col-md-8">	
 		<section class="part">
 			<h1><%= @song.title %> (<%= @song.year %>) - <%= @song.artist %></h2>
+			<p>Published on <%= @song.created_at.strftime("%b %d, %Y") %></p>
 		</section>
 
 		<section class="part">	

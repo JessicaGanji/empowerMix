@@ -6,7 +6,7 @@
 
 		<section class="part">
 			<h1><%= @song.title %> (<%= @song.year %>) - <%= @song.artist %></h1>
-			<p>Published on <%= @user_id.created_at %> <%= link_to '@'+@user_id.username, user_path(@user_id) %></p>
+			<p>Published on <%= @user_id.created_at.strftime("%b %d, %Y") %> <%= link_to '@'+@user_id.username, user_path(@user_id) %></p>
 			<p class="text"><%= @song.description %></p>
 		</section>
 
@@ -15,18 +15,24 @@
 			<p class="text"><%= @song.lyrics %></p>
 		</section>
 
-		<section class="part">
-			<p>YouTube Link: <a href="<%= @song.link %>"><%= @song.link %></a></p>
-			<p>Updated at: <%= @user_id.updated_at %></p> 
-
+		<section class="part"> 
 			<%= link_to '[ Previous ]', songs_path %>
-			<%= link_to '[ Back to Songs ]', songs_path %> 
+			<%= link_to '[ Back to Songs ]', library_path %> 
 			<%= link_to '[ Next ]', songs_path %> 
+		</section>
 
-			<%= link_to '[ Edit ]', songs_path %> 
-			<%= link_to '[ Delete ]', songs_path %> 
+		<section class="part">
+			<% if current_user.id == @song.user_id %>
+				<p>YouTube Link: <a href="<%= @song.link %>"><%= @song.link %></a></p>
+				<p>Updated at: <%= @user_id.updated_at %></p>	
+				<%= link_to '[ Edit ]', user_song_path(@song.user_id, @song.id) %> 
+				<%= link_to '[ Delete ]', destroy_song_path(@song.user_id, @song.id), method: :delete %>  
+			<% else %>
+				<p>YouTube Link: <a href="<%= @song.link %>"><%= @song.link %></a></p>
+				<p>Updated at: <%= @user_id.updated_at %></p>
+			<% end %>
 		</section>
 	</div> 
 
-	<%= render 'layouts/sidebar' %>
+	<%= render 'layouts/song_sidebar' %>
 </section>
