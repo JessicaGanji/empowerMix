@@ -29,7 +29,7 @@ class SongsController < ApplicationController
 
 	def create
 		@user = User.find( params[:user_id] )
-    	@song = @user.songs.new( song_params )
+		@song = @user.songs.new( song_params )
 		if @song.save
 			redirect_to view_song_path(@song.id)
 		else
@@ -63,7 +63,7 @@ private
 	end
 
 	def set_song
-		@song = Song.find( params[:id] )
+		@song = Song.find( params[:song_id] )
 	end
 
 end

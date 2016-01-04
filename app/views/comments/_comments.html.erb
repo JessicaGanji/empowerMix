@@ -1,0 +1,15 @@
+<% if @song.comments.length > 0 %>
+	<% @song.comments.each do |comment| %>
+		<section class="part">
+			<p><b>Author:</b><%= comment.name %></p>
+			<p><b>Email:</b><%= comment.email %></p>
+			<p><b>Comment:</b><%= comment.body %></p>
+			<p><%= link_to '[ Delete ]', library_path(comment), method: :delete %></p>
+		</section>
+	<% end %>
+<% else %>
+	<section class="part">
+		<p>No comments have been posted yet.</p>
+  	</section>
+<% end %>
+

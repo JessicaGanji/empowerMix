@@ -1,7 +1,7 @@
 <section class="row background">
 	<div class="col-md-8">	
 		<section class="video">
-			<iframe width="100%" height="315" src="//www.youtube.com/embed/<%= @youtube_id %>" frameborder="0" allowfullscreen></iframe><br>
+			<iframe width="100%" height="315" src="//www.youtube.com/embed/<%= @youtube_id %>?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe><br>
 		</section>
 
 		<section class="part">
@@ -14,6 +14,13 @@
 			<h3>Lyrics:</h3>
 			<p class="text"><%= @song.lyrics %></p>
 		</section>
+
+		<section class="part"> 
+			<h3>Leave a Comment:</h3>
+			<%#= render 'comments/form' %>
+		</section>
+
+		<%= render 'comments/comments' %>
 
 		<section class="part"> 
 			<%= link_to '[ Previous ]', songs_path %>

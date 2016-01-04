@@ -1,0 +1,14 @@
+<%= form_for ([@song, @song.comments.build]) do |f| %>
+
+	<h3><%= f.label :name %></h3>
+	<%= f.text_field :name, class: 'text_field' %>
+
+	<h3><%= f.label :email %></h3>
+	<%= f.email_field :email, class: 'text_field' %>
+
+	<h3><%= f.label :body %></h3>
+	<%= f.text_area :body, class: 'text_box' %>
+
+	<%= f.submit %>
+
+<% end %>

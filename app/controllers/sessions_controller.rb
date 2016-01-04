@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 		else
 			flash.now.alert = "invalid login credentials"
 			render :new
-	  end
+		end
 	end
 
 	def destroy

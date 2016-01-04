@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
 
   get 'songs' => 'songs#index', as: :songs
-  get 'songs/:id' => 'songs#view', as: :view_song
+  get 'songs/:song_id' => 'songs#view', as: :view_song
 
 
   get 'about' => 'songs#about', as: :about
@@ -28,10 +28,19 @@ Rails.application.routes.draw do
 
   get 'users/:user_id/new' => 'songs#new', as: :user_songs # Why can't I use new_song
   post 'users/:user_id/new' => 'songs#create'
-  get 'users/:user_id/:id/edit' => 'songs#edit', as: :user_song # Why can't I use edit_song
-  patch 'users/:user_id/:id/edit' => 'songs#update'
-  delete 'users/:user_id/:id' => 'songs#destroy', as: :destroy_song
-  get 'users/:user_id/:id' => 'songs#show', as: :song
+  get 'users/:user_id/:song_id/edit' => 'songs#edit', as: :user_song # Why can't I use edit_song
+  patch 'users/:user_id/:song_id/edit' => 'songs#update'
+  delete 'users/:user_id/:song_id' => 'songs#destroy', as: :destroy_song
+  get 'users/:user_id/:song_id' => 'songs#show', as: :song
+
+
+  get 'songs/:song_id/comments' => 'comments#index'
+  get 'songs/:song_id/comments/new' => 'comments#new'
+  post 'songs/:song_id' => 'comments#create'
+  get 'songs/:song_id/comments/:id/edit' => 'comments#edit'
+  get 'songs/:song_id/comments/:id' => 'comments#show'
+  patch 'songs/:song_id/comments/:id' => 'comments#update'
+  delete 'songs/:song_id' => 'comments#destroy'
 
 
 
