@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
 
 	def create
-		@comment = @song.comments.create( params.require( :comment ).permit( :body, :song_id, :name, :email ) )
+		@song = Song.find( params[:song_id] )
+		@comment = @song.comments.new( params.require( :comment ).permit( :body, :song_id, :name, :email ) )
 
 		if @comment.save
 			;flash[:notice] = 'Comment was successfully created.'

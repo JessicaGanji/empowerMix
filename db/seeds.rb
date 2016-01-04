@@ -40,100 +40,103 @@ gita = User.create( { first_name: 'Gita' }, { last_name: 'Ganji' }, { username: 
 # Sleater-Kinney Modern Girl
 # Christina Perri - "Human"
 # Mary Lambert, "Secrets"
-# "Not a Pretty Girl" - Ani DiFranco
+
 # KEEP YA HEAD UP- TUPAC
 # YOU GOTTA BE- DES’REE
 # Kate Nash - "Mansion Song"
 # "Gonna Be An Engineer" - Peggy Seeger
 # Emilie Autumn - "Thank God I'm Pretty"
 # Katy Perry - "Roar"
-# M.I.A. - "Bad Girls"
-# Nancy Sinatra - "These Boots Are Made for Walkin'"
+
+
 # Marina and the Diamonds - "OH NO!"
 # Marina and the Diamonds - "HOW TO BE A HEARTBREAKER"
-# Destinys Child - "Independent Women Part 1"
-# Destiny’s Child - "Survivor"
+
 # Christina Aguilera - "Can’t Hold us Down"
-# Beyonce - "Run The World (Girls)"
+
 # Beyoncé - "Grown Woman"
-# Beyoncé - "Flawless"
 # Beyoncé - "Diva"
 # Beyonce - "Listen"
-# TLC - "No Scrubs"
 # Spice Girls "Wannabe" 
-# Lesley Gore - "You Don’t Own Me"
-# Elle King - "Ex's & Oh's"
-# No Doubt - "Just A Girl"
-# Rihanna - "Take A Bow"
+
 # Carrie Underwood - "Before He Cheats"
 # Karmin - "Hello"
 # Kimbra - "Settle Down"
 # Tacocat - "Hey Girl"
 # Tacocat - "Crimson Wave"
 # Janelle Monae - "Cold War"
-# Lily Allen - "Hard Out Here" 
-# Lily Allen - "The Fear"
-# Lily Allen - "22"
-# Lily Allen - "Sheezus"
 # Gwen Stefani - "Hollaback Girl"
 # Ke$ha - "Sleazy"
 # Ke$ha - "We R Who We R"
 # Icona Pop - "Girlfriend"
-# Kelly Clarkson - "Stronger (What Doesn't Kill You)"
 # Jessie J - "Who's Laughing Now"
 # Judas (Lady Gaga)
 # My Humps (Black Eyed Peas)
 # Telephone (Lady Gaga Ft. Beyoncé)
 # Acapella (Kelis)
 # Peacock (Katy Perry)
-# Jenny Lewis - "Just One Of The Guys" 
 # Yelle - "Je Veux Te Voir"
 # Peaches - "Boys Wanna Be Her"
-# Eurythmics, Aretha Franklin - "Sisters Are Doin' It For Themselves"
 # t.A.T.u. - "All The Things She Said"
 # Loretta Lynn - "The Pill"
 # Kellie Pickler - "Tough"
 # Dolly Parton - "Dumb Blonde"
 # "When I Was A Boy" — Dar Williams
-# Taylor Swift - "Blank Space"
+
 # Mary J. Blige - "Doubt"
 # Meghan Trainor - "All About That Bass"
 # Lorde - "Yellow Flicker Beat"
-# Fifth Harmony - "BO$$"
-# Meredith Brooks - "I'm a Bitch"
-# "Never Underestimate A Girl" - Vanessa Hudgens
+
 # "This One’s for the Girls" - Martina McBride
-# "Miss Independent" - Kelly Clarkson
-# "I Will Survive" - Gloria Gaynor
+
+
 # "So What" - Pink
 # Mary J. Blige - "Can’t Hold a Good Woman Down" 
-# Aretha Franklin - "Respect" 
 # Superchick - "One Girl Revolution"
-# Jordin Sparks - "I Am Woman" 
-# Bikini Kill - "Rebel Girl"
+
 # Rachel Crow - "Mean Girls"
-# Chaka Khan - "I’m Every Woman"
-# Grace ft. G-Eazy - "You Don't Own Me"
-# "Q.U.E.E.N." - Janelle Monae Feat. Erykah Badu
-# "U.N.I.T.Y" - Queen Latifah
-# Salt-N-Pepa - "None of Your Business"
+
+
+
 # Santigold - "Girls"
-# India Aire - "Video"
-# India Arie - "Just Do You"
-# Hailee Steinfeld - "Love Myself"
+
 # KT Tunstall - "Suddenly I See"
-# Iggy Azalea - "Work"
-# Rachel Platten - "Fight Song"
-# Alessia Cara - "Here"
-# Katy Perry - "Part Of Me"
+# 
 # Christina Aguilera - "Beautiful"
 # Lady Gaga - "Til It Happens To You"
-# Colbie Caillat - "Try"
+
+
+
+# Eurythmics, Aretha Franklin - "Sisters Are Doin' It For Themselves"
+# Jenny Lewis - "Just One Of The Guys" 
+# Taylor Swift - "Blank Space"
 # The Runaways - "Cherry Bomb"
-
-
-
-
-
-
+# India Aire - "Video"
+# Hailee Steinfeld - "Love Myself"
+# Grace ft. G-Eazy - "You Don't Own Me"
+# Lesley Gore - "You Don’t Own Me"
+# Elle King - "Ex's & Oh's"
+# No Doubt - "Just A Girl"
+# Aretha Franklin - "Respect" 
+# Bikini Kill - "Rebel Girl"
+# Alessia Cara - "Here"
+# Meredith Brooks - "I'm a Bitch"
+# "Miss Independent" - Kelly Clarkson
+# "Q.U.E.E.N." - Janelle Monae Feat. Erykah Badu
+# "U.N.I.T.Y" - Queen Latifah
+# Colbie Caillat - "Try"
+# "Not a Pretty Girl" - Ani DiFranco
+# Nancy Sinatra - "These Boots Are Made for Walkin'"
+# Destinys Child - "Independent Women Part 1"
+# Destiny’s Child - "Survivor"
+# Beyonce - "Run The World (Girls)"
+# Beyoncé - "Flawless"
+# Lily Allen - "Hard Out Here" 
+# Lily Allen - "The Fear"
+# Lily Allen - "22"
+# "I Will Survive" - Gloria Gaynor
+# Salt-N-Pepa - "None of Your Business"
+# M.I.A. - "Bad Girls"
+# Rachel Platten - "Fight Song"
+# Katy Perry - "Part Of Me"
 
