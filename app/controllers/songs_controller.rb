@@ -20,18 +20,19 @@ class SongsController < ApplicationController
 	def view
 		@youtube_id = @song.link.split("=").last
 		@user_id = User.find( @song.user_id )
+		@voter_id = @song.votes_for.voters
 		@comment = Comment.new
 	end
 
-	def upvote
-		@song = Song.find(params[:song_id])
-		@song.upvote_by @current_user
+	def upvote 
+		@song = Song.find( params[:song_id] )
+		@song.upvote_by current_user
 		redirect_to :back
-	end
+	end  
 
 	def downvote
-		@song = Song.find(params[:song_id])
-		@song.downvote_by @current_user
+		@song = Song.find( params[:song_id] )
+		@song.downvote_by current_user
 		redirect_to :back
 	end
 

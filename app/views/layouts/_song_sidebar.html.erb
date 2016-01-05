@@ -1,12 +1,20 @@
 <div class="col-md-4">
 	<section class="part">
-		<p>SONG-HEART Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<%= link_to like_song_path(@song), class: 'vote', remote: true, data: { type: :json }, method: :patch do %>
+		  Upvote
+		  <%= @song.get_upvotes.size %>
+		<% end %>
 
-
+		<%= link_to dislike_song_path(@song), class: 'vote', remote: true, data: { type: :json }, method: :patch do %>
+		  Downvote
+		  <%= @song.get_downvotes.size %>
+		<% end %>
 	</section>
 
 	<section class="part">
-		<p>SONG-SONG-SHARE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<%= @song.votes_for_ids %>
+		<%#= @song.votes_for.up.by_type(User).voters %>
+		<%#= @user_id() %>
 	</section>
 
 	<section class="part">

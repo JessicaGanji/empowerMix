@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 	has_many :songs, dependent: :destroy
 	has_many :comments, dependent: :destroy
 
-	#acts_as_voter
+	# acts_as_voter
 	
 	validates :username, presence: true, uniqueness: true
 	validates :email, presence: true, uniqueness: true

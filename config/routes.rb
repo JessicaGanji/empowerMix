@@ -26,9 +26,9 @@ Rails.application.routes.draw do
   get 'library' => 'songs#library', as: :library
 
 
-  get 'users/:user_id/new' => 'songs#new', as: :user_songs # Why can't I use new_song
+  get 'users/:user_id/new' => 'songs#new', as: :user_songs
   post 'users/:user_id/new' => 'songs#create'
-  get 'users/:user_id/:song_id/edit' => 'songs#edit', as: :user_song # Why can't I use edit_song
+  get 'users/:user_id/:song_id/edit' => 'songs#edit', as: :user_song
   patch 'users/:user_id/:song_id/edit' => 'songs#update'
   delete 'users/:user_id/:song_id' => 'songs#destroy', as: :destroy_song
   get 'users/:user_id/:song_id' => 'songs#show', as: :song
@@ -43,8 +43,8 @@ Rails.application.routes.draw do
   delete 'songs/:song_id' => 'comments#destroy', as: :destroy_comment
 
 
-  put 'like' => 'links#upvote'
-  put 'dislike' => 'links#downvote'
+  patch 'songs/:song_id/like' => 'songs#upvote', as: :like_song
+  patch 'songs/:song_id/dislike' => 'songs#downvote', as: :dislike_song
 
 
 end
