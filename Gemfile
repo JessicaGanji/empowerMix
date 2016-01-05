@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'pry-rails'
-
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'filterrific'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

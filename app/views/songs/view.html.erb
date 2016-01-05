@@ -1,32 +1,52 @@
 <section class="row background">
 	<div class="col-md-8">	
-		<section class="video">
-			<iframe width="100%" height="315" src="//www.youtube.com/embed/<%= @youtube_id %>?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe><br>
-		</section>
+
+		<% if @song.link %>
+		<% elsif  @song.link.length = 0 %>
+		<% elsif  @song.link.length > 0 %>
+			<section class="video">
+				<iframe width="100%" height="315" src="//www.youtube.com/embed/<%= @youtube_id %>?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+			</section>
+		<% end %>
+
+		<% if @song.embed %>
+		<% elsif  @song.embed.length = 0 %>
+		<% elsif  @song.embed.length > 0 %>
+			<section class="music">
+				<%= @song.embed.html_safe %>
+			</section>
+		<% end %>
 
 		<section class="part">
 			<h1><%= @song.title %> (<%= @song.year %>) - <%= @song.artist %></h1>
 			<p>Published on <%= @song.created_at.strftime("%b %d, %Y") %> <%= link_to '@'+@user_id.username, user_path(@user_id) %></p>
 			<p class="text"><%= @song.description %></p>
-			<p><strong>Genre:</strong> <%= @song.genre %></p>
+			<p><em><%= @song.genre %></em></p>
 		</section>
 
-		<section class="part">		
-			<h3>Lyrics:</h3>
-			<p class="text"><%= @song.lyrics %></p>
-		</section>
+		<% if @song.lyrics %>
+		<% elsif  @song.lyrics.length = 0 %>
+		<% elsif  @song.lyrics.length > 0 %>
+			<section class="part">		
+				<h4>Lyrics:</h4>
+				<p class="text"><%= @song.lyrics %></p>
+			</section>
+		<% end %>
 
 		<section class="part"> 
-			<h3>Leave a Comment:</h3>
-			<%#= render 'comments/form' %>
+			<% if @current_user == @user %>
+				<h3><%= link_to 'log In', login_path %> or <%= link_to 'Sign Up', new_user_path %> to Leave a Comment</h3>			    	 
+			<% else %>
+				<h3>Leave a Comment:</h3>
+				<%= render 'comments/form', :song => @song %>
+			<% end %>
 		</section>
 
 		<%= render 'comments/comments' %>
 
 		<section class="part"> 
-			<%= link_to '[ Previous ]', songs_path %>
-			<%= link_to '[ Back to Songs ]', library_path %> 
-			<%= link_to '[ Next ]', songs_path %> 
+			<%= link_to '[ Back to Library ]', library_path %> 
+			<%= link_to '[ Random Pick ]', songs_path %> 
 		</section>
 
 		<section class="part">
@@ -35,9 +55,6 @@
 				<p>Updated on <%= @user_id.updated_at.strftime("%b %d, %Y") %></p>	
 				<%= link_to '[ Edit ]', user_song_path(@song.user_id, @song.id) %> 
 				<%= link_to '[ Delete ]', destroy_song_path(@song.user_id, @song.id), method: :delete %>  
-			<% else %>
-				<p>YouTube Link: <a href="<%= @song.link %>"><%= @song.link %></a></p>
-				<p>Updated at: <%= @user_id.updated_at %></p>
 			<% end %>
 		</section>
 	</div> 

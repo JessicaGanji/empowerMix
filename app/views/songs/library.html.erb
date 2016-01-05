@@ -1,50 +1,10 @@
 <section class="row blank">
-	<div class="col-md-10">
-		<h1>Music Library</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</div>
-</section>
-
-<section class="row background">
-	<div class="col-md-4">
-		<section class="part">
-		<span>Sort</span>
-		<ul>
-			<li><%= link_to 'Year' %></li>
-			<li><%= link_to 'Title' %></li>
-			<li><%= link_to 'Artist' %></li>
-			<li><%= link_to 'Date Published' %></li>
-			<li><%= link_to 'Category' %></li>
-		</ul>
-		</section>
-
-		<section class="part">
-		<span>Filter</span>
-		<ul>
-			<li><%= link_to 'Year' %></li>
-			<li><%= link_to 'Category' %></li>
-			<li><%= link_to 'Pop' %></li>
-			<li><%= link_to 'Hip-Hop' %></li>
-			<li><%= link_to 'Rock' %></li>
-			<li><%= link_to 'R&B' %></li>
-			<li><%= link_to 'Jazz' %></li>
-			<li><%= link_to 'Latin' %></li>
-			<li><%= link_to 'Metal' %></li>
-			<li><%= link_to 'Electronica' %></li>
-			<li><%= link_to 'Classical' %></li>
-			<li><%= link_to 'World' %></li>
-			<li><%= link_to 'Other' %></li>
-		</ul>
-		</section>
-	</div>
-
-	<div class="col-md-8 part">
-		<section class="part">
-		<% @songs.each do |song| %>
-			<h3><%= song.year %> - 
-			<%= link_to song.title, view_song_path(song) %> 
-			by <%= song.artist %></h3>
-		<% end %>
-		</section>
-	</div>
+  <div class="col-md-12">
+    <h2>Music Library</h2>
+    <% @songs.each do |song| %>
+      <h3><%= song.year %> - 
+      <%= link_to song.title, view_song_path(song) %> 
+      by <%= song.artist %></h3>
+    <% end %>
+  </div>
 </section>

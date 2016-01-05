@@ -20,6 +20,19 @@ class SongsController < ApplicationController
 	def view
 		@youtube_id = @song.link.split("=").last
 		@user_id = User.find( @song.user_id )
+		@comment = Comment.new
+	end
+
+	def upvote
+		@song = Song.find(params[:song_id])
+		@song.upvote_by @current_user
+		redirect_to :back
+	end
+
+	def downvote
+		@song = Song.find(params[:song_id])
+		@song.downvote_by @current_user
+		redirect_to :back
 	end
 
 	def new
@@ -59,7 +72,7 @@ class SongsController < ApplicationController
 private
 
 	def song_params
-		params.require( :song ).permit( :title, :artist, :year, :genre, :link, :user_id, :description, :lyrics )
+		params.require( :song ).permit( :title, :artist, :year, :genre, :link, :user_id, :description, :lyrics, :embed )
 	end
 
 	def set_song

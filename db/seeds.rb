@@ -36,29 +36,19 @@ gita = User.create( { first_name: 'Gita' }, { last_name: 'Ganji' }, { username: 
 # Joan Jett - "Bad Reputation"
 # "Gonna Be An Engineer" - Peggy Seeger
 # Shania Twain - "Man! I Feel Like A Woman!" 
-
-# Sleater-Kinney Modern Girl
-# Christina Perri - "Human"
 # Mary Lambert, "Secrets"
-
 # KEEP YA HEAD UP- TUPAC
 # YOU GOTTA BE- DES’REE
 # Kate Nash - "Mansion Song"
 # "Gonna Be An Engineer" - Peggy Seeger
 # Emilie Autumn - "Thank God I'm Pretty"
 # Katy Perry - "Roar"
-
-
 # Marina and the Diamonds - "OH NO!"
 # Marina and the Diamonds - "HOW TO BE A HEARTBREAKER"
-
-# Christina Aguilera - "Can’t Hold us Down"
-
 # Beyoncé - "Grown Woman"
 # Beyoncé - "Diva"
 # Beyonce - "Listen"
 # Spice Girls "Wannabe" 
-
 # Carrie Underwood - "Before He Cheats"
 # Karmin - "Hello"
 # Kimbra - "Settle Down"
@@ -72,7 +62,6 @@ gita = User.create( { first_name: 'Gita' }, { last_name: 'Ganji' }, { username: 
 # Jessie J - "Who's Laughing Now"
 # Judas (Lady Gaga)
 # My Humps (Black Eyed Peas)
-# Telephone (Lady Gaga Ft. Beyoncé)
 # Acapella (Kelis)
 # Peacock (Katy Perry)
 # Yelle - "Je Veux Te Voir"
@@ -82,31 +71,21 @@ gita = User.create( { first_name: 'Gita' }, { last_name: 'Ganji' }, { username: 
 # Kellie Pickler - "Tough"
 # Dolly Parton - "Dumb Blonde"
 # "When I Was A Boy" — Dar Williams
-
 # Mary J. Blige - "Doubt"
 # Meghan Trainor - "All About That Bass"
 # Lorde - "Yellow Flicker Beat"
-
 # "This One’s for the Girls" - Martina McBride
-
-
 # "So What" - Pink
 # Mary J. Blige - "Can’t Hold a Good Woman Down" 
 # Superchick - "One Girl Revolution"
-
 # Rachel Crow - "Mean Girls"
-
-
-
 # Santigold - "Girls"
-
 # KT Tunstall - "Suddenly I See"
-# 
 # Christina Aguilera - "Beautiful"
 # Lady Gaga - "Til It Happens To You"
 
 
-
+# Sleater-Kinney Modern Girl
 # Eurythmics, Aretha Franklin - "Sisters Are Doin' It For Themselves"
 # Jenny Lewis - "Just One Of The Guys" 
 # Taylor Swift - "Blank Space"
@@ -139,4 +118,6 @@ gita = User.create( { first_name: 'Gita' }, { last_name: 'Ganji' }, { username: 
 # M.I.A. - "Bad Girls"
 # Rachel Platten - "Fight Song"
 # Katy Perry - "Part Of Me"
+# Christina Aguilera - "Can’t Hold us Down"
+
 

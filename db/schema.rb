@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160103201221) do
+ActiveRecord::Schema.define(version: 20160105060146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,9 +23,11 @@ ActiveRecord::Schema.define(version: 20160103201221) do
     t.integer  "song_id"
     t.string   "name"
     t.string   "email"
+    t.integer  "user_id"
   end
 
   add_index "comments", ["song_id"], name: "index_comments_on_song_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "songs", force: :cascade do |t|
     t.integer  "year"
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160103201221) do
     t.integer  "user_id"
     t.string   "description"
     t.string   "lyrics"
+    t.string   "embed"
   end
 
   add_index "songs", ["user_id"], name: "index_songs_on_user_id", using: :btree
@@ -59,6 +62,22 @@ ActiveRecord::Schema.define(version: 20160103201221) do
     t.string   "location"
   end
 
+  create_table "votes", force: :cascade do |t|
+    t.integer  "votable_id"
+    t.string   "votable_type"
+    t.integer  "voter_id"
+    t.string   "voter_type"
+    t.boolean  "vote_flag"
+    t.string   "vote_scope"
+    t.integer  "vote_weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
+  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
+
   add_foreign_key "comments", "songs"
+  add_foreign_key "comments", "users"
   add_foreign_key "songs", "users"
 end

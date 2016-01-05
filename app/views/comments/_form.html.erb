@@ -1,13 +1,19 @@
-<%= form_for @song do |f| %>
+<%= form_for [ @user, song, @comment ] do |f| %>
 
-	<h3><%= f.label :name %></h3>
-	<%= f.text_field :name, class: 'text_field' %>
+	<h3><% f.label :name %></h3>
+	<% f.text_field :name, class: 'text_field' %>
 
-	<h3><%= f.label :email %></h3>
-	<%= f.email_field :email, class: 'text_field' %>
+	<h3><% f.label :email %></h3>
+	<% f.email_field :email, class: 'text_field' %>
 
-	<h3><%= f.label :body %></h3>
+	<h3><% f.label :body %></h3>
 	<%= f.text_area :body, class: 'text_box' %>
+
+	<% f.label :user_id %>
+	<%= f.hidden_field :user_id, :value => current_user.id %>
+
+	<% f.label :song_id %>
+	<%= f.hidden_field :song_id, :value => song.id %>
 
 	<%= f.submit %>
 

@@ -143,8 +143,6 @@ section img {
 .slider {
 	margin: 0 -15px;
 	background-color: #444;
-	height: 350px;
-	overflow: hidden;
 }
 
 .donate {
@@ -173,20 +171,29 @@ section img {
 	background: $fill;
 	padding: 15px;
 	margin: 0 0 30px 0;
+
+	h3 {
+		margin-bottom: 0;
+	}
+
+	h4 {
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+
 }
 
 
 /* Responsive Video */
 
-.video {
-	background: $fill;
+.video, .music {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	margin: 0 0 30px 0;
 	height: 0;
 }
-.video iframe {
+.video iframe, .music iframe {
 	position: absolute;
 	top: 0;
 	left: 0;

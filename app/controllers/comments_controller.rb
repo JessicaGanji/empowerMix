@@ -1,23 +1,24 @@
 class CommentsController < ApplicationController
 
-	def create
-		@song = Song.find( params[:song_id] )
-		@comment = @song.comments.new( params.require( :comment ).permit( :body, :song_id, :name, :email ) )
+	def new
+		@user = User.find( current_user.id )
+		@comment = current_user.comments.new
+	end
 
-		if @comment.save
-			;flash[:notice] = 'Comment was successfully created.'
-			redirect_to library_path
-		else
-			;flash[:notice] = "Error creating comment: #{@comment.errors}"
-			redirect_to library_path
-		end
+	def create
+		@user = User.find( current_user.id )
+		@comment = Comment.new( comment_params )
 	end
 
 	def destroy
-		@comment = Comment.find(params[:id])
+		@user = User.find( current_user.id )
 		@comment.destroy
+	end
 
-		redirect_to library_path
+private
+
+	def comment_params
+		params.require( :comment ).permit( :body, :song_id, :name, :email, :user_id )
 	end
 
 end

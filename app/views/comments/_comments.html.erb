@@ -1,10 +1,11 @@
 <% if @song.comments.length > 0 %>
 	<% @song.comments.each do |comment| %>
 		<section class="part">
-			<p><b>Author:</b><%= comment.name %></p>
-			<p><b>Email:</b><%= comment.email %></p>
-			<p><b>Comment:</b><%= comment.body %></p>
-			<p><%= link_to '[ Delete ]', library_path(comment), method: :delete %></p>
+			<p><%= comment.body %></p>
+			<p><%= link_to '@'+comment.user.username, user_path(comment.user) %> ( <%= comment.created_at.strftime("%b %d, %Y") %> )</p>
+			<% if @current_user == @user %>
+				<%= link_to '[ Delete ]', destroy_comment_path(@song.user_id, @song.id), method: :delete %>  
+			<% end %>
 		</section>
 	<% end %>
 <% else %>

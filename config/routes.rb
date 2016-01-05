@@ -36,13 +36,15 @@ Rails.application.routes.draw do
 
   get 'songs/:song_id/comments' => 'comments#index'
   get 'songs/:song_id/comments/new' => 'comments#new'
-  post 'songs/:song_id' => 'comments#create'
+  post 'songs/:song_id' => 'comments#create', as: :song_comments
   get 'songs/:song_id/comments/:id/edit' => 'comments#edit'
   get 'songs/:song_id/comments/:id' => 'comments#show'
   patch 'songs/:song_id/comments/:id' => 'comments#update'
-  delete 'songs/:song_id' => 'comments#destroy'
+  delete 'songs/:song_id' => 'comments#destroy', as: :destroy_comment
 
 
+  put 'like' => 'links#upvote'
+  put 'dislike' => 'links#downvote'
 
 
 end
