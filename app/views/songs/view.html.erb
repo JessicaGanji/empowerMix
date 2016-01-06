@@ -36,11 +36,11 @@
 		<%= render 'comments/comments' %>
 
 		<section class="part"> 
-			<% if @current_user == @user %>
-				<h3>Leave a Comment:</h3>
-				<%= render 'comments/form', :song => @song %>		    	 
-			<% else %>
+			<% if current_user.nil? %>
 				<h3><%= link_to 'log In', login_path %> or <%= link_to 'Sign Up', new_user_path %> to Leave a Comment</h3>
+			<% else %>
+				<h3>Leave a Comment:</h3>
+				<%= render 'comments/form', :song => @song %>
 			<% end %>
 		</section>
 
@@ -59,26 +59,26 @@
 		</section>
 	</div> 
 
-<div class="col-md-4">
-	<section class="part">
-		<%= link_to like_song_path(@song), class: 'vote', remote: true, data: { type: :json }, method: :patch do %>
-		  Upvote
-		  <%= @song.get_upvotes.size %>
-		<% end %>
-	</section>
+	<div class="col-md-4">
+		<section class="part">
+			<%= link_to like_song_path(@song), method: :patch do %>
+			  Upvote
+			  <%= @song.get_upvotes.size %>
+			<% end %>
+		</section>
 
-	<section class="part">
-		<p><% @song.votes_for.voters.each do |s| %>
-			<%= link_to '@'+s.username, user_path(s.id) %>,
-		<% end %></p>
-	</section>
+		<section class="part">
+			<p><% @song.votes_for.voters.each do |s| %>
+				<%= link_to '@'+s.username, user_path(s.id) %>,
+			<% end %></p>
+		</section>
 
-	<section class="part">
-		<p>SONG-RANDOM FEATURED ARTIST Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</section>
+		<section class="part">
+			<p>SONG-RANDOM FEATURED ARTIST Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</section>
 
-	<section class="part">
-		<p>SONG-AD Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</section>
-</div> 
+		<section class="part">
+			<p>SONG-AD Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</section>
+	</div> 
 </section>

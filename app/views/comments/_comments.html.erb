@@ -4,7 +4,7 @@
 			<p><%= comment.body %></p>
 			<p><%= link_to '@'+comment.user.username, user_path(comment.user) %> ( <%= comment.created_at.strftime("%b %d, %Y") %> )</p>
 			<% if @current_user == @user %>
-				<p><%= link_to '[ Delete ]', destroy_comment_path(@song.user_id, @song.id), method: :delete %><p>
+				<p><%= link_to '[ Delete ]', destroy_comment_path( @song, comment), method: :delete %><p>
 			<% end %>
 		</section>
 	<% end %>

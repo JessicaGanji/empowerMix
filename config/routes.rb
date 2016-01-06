@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   get 'songs/:song_id/comments/:id/edit' => 'comments#edit'
   get 'songs/:song_id/comments/:id' => 'comments#show'
   patch 'songs/:song_id/comments/:id' => 'comments#update'
-  delete 'songs/:song_id' => 'comments#destroy', as: :destroy_comment
+  delete 'songs/:song_id/comments/:id' => 'comments#destroy', as: :destroy_comment
 
 
   patch 'songs/:song_id/like' => 'songs#upvote', as: :like_song

@@ -6,13 +6,22 @@ class CommentsController < ApplicationController
 	end
 
 	def create
+		@song = Song.find( params[:song_id] )
 		@user = User.find( current_user.id )
 		@comment = Comment.new( comment_params )
+
+		if @comment.save
+			redirect_to view_song_path(@song)
+		else
+			render :new
+		end
 	end
 
 	def destroy
-		@user = User.find( current_user.id )
-		@comment.destroy
+		@song = Song.find( params[:song_id] )
+		@comment = Comment.find( params[:id] ) 
+  		@comment.destroy
+  		redirect_to view_song_path(@song)
 	end
 
 private

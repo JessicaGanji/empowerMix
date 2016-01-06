@@ -9,7 +9,14 @@
 		</section>
 
 		<section class="part">
-			<h2>Contributions:</h2>
+			<% if @user.songs.count == 1 %> 
+				<h2>Contribution</h2>
+			<% elsif @user.songs.count > 1 %>
+				<h2><%= @user.songs.count %> Contributions:</h2>
+			<% else %>
+				<h2><%= @user.first_name %> has not made any contributions yet</h2>
+			<% end %>
+			
 			<% @user.songs.each do |song| %>
 				<h3><%= link_to song.title, song_path( @user, song ) %> by <%= song.artist %></h3>
 				<p> <%= song.created_at.strftime("%b %d, %Y") %></p><br>
