@@ -14,21 +14,21 @@
 			<% elsif @user.songs.count > 1 %>
 				<h2><%= @user.songs.count %> Contributions:</h2>
 			<% else %>
-				<h2><%= @user.first_name %> has not made any contributions yet</h2>
+				<h3><%= @user.first_name %> hasn't made any contributions yet.</h3>
 			<% end %>
 			
-			<% @user.songs.each do |song| %>
-				<h3><%= link_to song.title, song_path( @user, song ) %> by <%= song.artist %></h3>
-				<p> <%= song.created_at.strftime("%b %d, %Y") %></p><br>
-			<% end %></p>
+			<% @user.songs.order( 'created_at DESC, title ASC' ).each do |song| %>
+				<h3><%= link_to song.title, view_song_path(song) %> by <%= song.artist %></h3>
+				<p> <%= song.created_at.strftime("%b %d, %Y") %></p>
+			<% end %>
 
-			<% if @current_user == @song %>	
+			<% if current_user == @user %>	
 				<%= link_to '[ Submit a New Song ]', user_songs_path(@user) %> 
 			<% end %>
 		</section>
 
 		<section class="part">
-			<% if @current_user == @song %>	
+			<% if current_user == @user %>	
 				<%= link_to '[ Edit ]', edit_user_path %> 
 				<%= link_to '[ Delete ]', destroy_user_path, method: :delete %>
 				<%= link_to '[ Back to Contributors ]', users_path %>
