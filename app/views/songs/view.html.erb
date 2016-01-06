@@ -44,10 +44,7 @@
 			<% end %>
 		</section>
 
-		<section class="part"> 
-			<%= link_to '[ Back to Library ]', library_path %> 
-			<%= link_to '[ Random Pick ]', view_song_path(@random) %> 
-		</section>
+		<div class="view_button"><%= link_to 'Back to Library', library_path %></div> 
 
 		<section class="part">
 			<% if @current_user == @user %>
@@ -59,19 +56,28 @@
 		</section>
 	</div> 
 
+
+
+
+
+
+
 	<div class="col-md-4">
 		<section class="part">
 			<%= link_to like_song_path(@song), method: :patch do %>
 			  Upvote
 			  <%= @song.get_upvotes.size %>
 			<% end %>
-		</section>
 
-		<section class="part">
+			<hr>
+
 			<p><% @song.votes_for.voters.each do |s| %>
 				<%= link_to '@'+s.username, user_path(s.id) %>,
 			<% end %></p>
 		</section>
+
+		<div class="view_button"><%= link_to "Next: It's a Surprise!", view_song_path(@random) %></div> 
+
 
 		<section class="part">
 			<p>SONG-RANDOM FEATURED ARTIST Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

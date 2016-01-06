@@ -1,20 +1,71 @@
 <section class="row background">
 	<div class="col-md-4">
 		<section class="part">
-			<img src="/images/donate.jpg">
+			<%= image_tag @user.image.url(:large) %>
 		</section>
 
-		<section class="part">
-			<p>USER-SUBMIT A SONG Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		</section>
+		<% if current_user == @user %>
+			<section class="part">
+				<%= link_to '[ Edit Profile ]', edit_user_path %> 
+				<%= link_to '[ Delete Profile ]', destroy_user_path, method: :delete %>
+			</section>
 
-		<section class="part">
-			<p>USER-RANDOM FEATURED ARTIST Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		</section>
+			<section class="part">
+				<%= link_to '[ Back to Contributors ]', users_path %>
+			</section>
+		<% else %>
+			<section class="part">	 
+				<%= link_to '[ Back to Contributors ]', users_path %>
+			</section>
+		<% end %>
 
-		<section class="part">
-			<p>USER-AD Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		</section>
+		<% if @user.spotify_link.nil? %>
+		<% elsif @user.spotify_link.length > 0 %>
+			<section class="spotify">		
+			<a href="<%= @user.spotify_link %>" target="_blank"><img src="#"></a>
+			</section>
+		<% else %>
+		<% end %>
+
+		<% if @user.soundcloud_link.nil? %>
+		<% elsif @user.soundcloud_link.length > 0 %>
+			<section class="soundcloud">		
+			<a href="<%= @user.soundcloud_link %>" target="_blank"><img src="#"></a>
+			</section>
+		<% else %>
+		<% end %>
+
+		<% if @user.facebook_link.nil? %>
+		<% elsif @user.facebook_link.length > 0 %>
+			<section class="facebook">		
+			<a href="<%= @user.facebook_link %>" target="_blank"><img src="#"></a>
+			</section>
+		<% else %>
+		<% end %>
+
+		<% if @user.youtube_link.nil? %>
+		<% elsif @user.youtube_link.length > 0 %>
+			<section class="youtube">		
+			<a href="<%= @user.youtube_link %>" target="_blank"><img src="#"></a>
+			</section>
+		<% else %>
+		<% end %>
+
+		<% if @user.instagram_link.nil? %>
+		<% elsif @user.instagram_link.length > 0 %>
+			<section class="instagram">		
+			<a href="<%= @user.instagram_link %>" target="_blank"><img src="#"></a>
+			</section>
+		<% else %>
+		<% end %>
+
+		<% if @user.twitter_link.nil? %>
+		<% elsif @user.twitter_link.length > 0 %>
+			<section class="twitter">		
+			<a href="<%= @user.twitter_link %>" target="_blank"><img src="#"></a>
+			</section>
+		<% else %>
+		<% end %>
 	</div> 
 
 
@@ -29,31 +80,24 @@
 
 		<section class="part">
 			<% if @user.songs.count == 1 %> 
-				<h2>Contribution</h2>
+				<h2><%= @user.songs.count %> Contribution</h2>
 			<% elsif @user.songs.count > 1 %>
-				<h2><%= @user.songs.count %> Contributions:</h2>
+				<h2><%= @user.songs.count %> Contributions</h2>
 			<% else %>
 				<h3><%= @user.first_name %> hasn't made any contributions yet.</h3>
 			<% end %>
-			
+
+			<ul>				
 			<% @user.songs.order( 'created_at DESC, title ASC' ).each do |song| %>
-				<h3><%= link_to song.title, view_song_path(song) %> by <%= song.artist %></h3>
-				<p> <%= song.created_at.strftime("%b %d, %Y") %></p>
+				<li><h3><%= link_to song.title, view_song_path(song) %> by <%= song.artist %></h3>
+				<p> <%= song.created_at.strftime("%b %d, %Y") %></p></li>
 			<% end %>
+			</ul>
 
 			<% if current_user == @user %>	
 				<%= link_to '[ Submit a New Song ]', user_songs_path(@user) %> 
 			<% end %>
 		</section>
 
-		<section class="part">
-			<% if current_user == @user %>	
-				<%= link_to '[ Edit ]', edit_user_path %> 
-				<%= link_to '[ Delete ]', destroy_user_path, method: :delete %>
-				<%= link_to '[ Back to Contributors ]', users_path %>
-			<% else %>	 
-				<%= link_to '[ Back to Contributors ]', users_path %>
-			<% end %>
-		</section>
 	</div>
 </section>	

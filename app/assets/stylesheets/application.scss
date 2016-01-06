@@ -303,7 +303,24 @@ footer {
 	white-space: pre-wrap;
 }
 
+.url_field {
+
+}
+
 .button {
+	width: 100%;
+	padding: 15px 0;
+	margin: 0 0 30px 0;
+	letter-spacing: 1.5px;
+	font-size: 15px;
+	font-weight: 300;
+	color: #fff;
+	text-align: center;
+	background: $secondary-color;
+	border: 0;
+}
+
+.nested_button {
 	width: 100%;
 	padding: 5px 0;
 	margin: 10px 0 0 0;
@@ -311,9 +328,78 @@ footer {
 	font-size: 15px;
 	font-weight: 300;
 	color: #fff;
-	background: $secondary-color;
+	background: #e8e8e8;
 	border: 0;
 }
+
+.view_button {
+	width: 100%;
+	padding: 15px 0;
+	margin: 0 0 30px 0;
+	letter-spacing: 1.5px;
+	font-size: 15px;
+	font-weight: 300;
+	text-align: center;
+	background: $primary-color;
+	border: 0;
+
+	a:link, a:visited {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	a:hover, a:active {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+.spotify, .soundcloud, .facebook, .youtube, .instagram, .twitter {
+	width: 100%;
+	padding: 15px 0;
+	margin: 0 0 2px 0;
+	letter-spacing: 1.5px;
+	font-size: 15px;
+	font-weight: 300;
+	text-align: center;
+	border: 0;
+
+	a:link, a:visited {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	a:hover, a:active {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+.spotify {
+	background:green;
+} 
+
+.soundcloud {
+	background: #ff3a00;
+}
+
+.facebook {
+	background: #3b5998;
+} 
+
+.youtube {
+	background: #bb0000;
+} 
+
+.instagram {
+	background: #517fa4;
+} 
+
+.twitter {
+	background: #00aced;
+} 
+
+
 
 
 

@@ -11,6 +11,11 @@
 	</section>
 
 	<section class='part'>
+	<h3><%= f.label :image, 'Selfie' %></h3>
+	<%= f.file_field :image, class: 'url_field' %>
+	</section>
+
+	<section class='part'>
 	<h3><%= f.label :username %></h3>
 	<%= f.text_field :username, class: 'text_field' %>
 	</section>
@@ -65,6 +70,28 @@
 	<section class='part'>
 	<h3><%= f.label :date_of_birth %></h3>
 	<%= f.text_field :date_of_birth, class: 'text_field' %>
+	</section>
+
+	<section class='part'>
+	<h3>Social</h3>
+
+	<h5><%= f.label :spotify_link, 'Spotify URL' %></h5>
+	<%= f.text_field :spotify_link, class: 'text_field' %>
+
+	<h5><%= f.label :soundcloud_link, 'SoundCloud URL' %></h5>
+	<%= f.text_field :soundcloud_link, class: 'text_field' %>
+
+	<h5><%= f.label :facebook_link, 'Facebook URL' %></h5>
+	<%= f.text_field :facebook_link, class: 'text_field' %>
+
+	<h5><%= f.label :youtube_link, 'Youtube URL' %></h5>
+	<%= f.text_field :youtube_link, class: 'text_field' %>
+
+	<h5><%= f.label :instagram_link, 'Instagram URL' %></h5>
+	<%= f.text_field :instagram_link, class: 'text_field' %>
+
+	<h5><%= f.label :twitter_link, 'Twitter URL' %></h5>
+	<%= f.text_field :twitter_link, class: 'text_field' %>
 	</section>
 
 	<%= f.submit class: 'button' %>
