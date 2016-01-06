@@ -21,6 +21,7 @@ class SongsController < ApplicationController
 		@youtube_id = @song.link.split("=").last
 		@user_id = User.find( @song.user_id )
 		@voter_id = @song.votes_for.voters
+		@random = Song.all.order('RANDOM()').first
 		@comment = Comment.new
 	end
 

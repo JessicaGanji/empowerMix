@@ -1,4 +1,23 @@
 <section class="row background">
+	<div class="col-md-4">
+		<section class="part">
+			<img src="/images/donate.jpg">
+		</section>
+
+		<section class="part">
+			<p>USER-SUBMIT A SONG Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</section>
+
+		<section class="part">
+			<p>USER-RANDOM FEATURED ARTIST Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</section>
+
+		<section class="part">
+			<p>USER-AD Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</section>
+	</div> 
+
+
 	<div class="col-md-8">	
 		<section class="part">
 			<h1><%= @user.first_name %> <%= @user.last_name %> <%= '@' + @user.username %></h2>
@@ -37,6 +56,4 @@
 			<% end %>
 		</section>
 	</div>
-
-	<%= render 'layouts/user_sidebar' %>
 </section>	
