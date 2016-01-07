@@ -22,6 +22,8 @@
 			<p>Published on <%= @song.created_at.strftime("%b %d, %Y") %> <%= link_to '@'+@user_id.username, user_path(@user_id) %></p>
 			<p class="text"><%= @song.description %></p>
 			<p><em><%= @song.genre %></em></p>
+			<hr><h4>Share</h4>
+			<%= social_share_button_tag(@song.title) %>
 		</section>
 
 		<% if @song.lyrics.nil? %>
