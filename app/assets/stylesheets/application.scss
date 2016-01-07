@@ -132,7 +132,7 @@ section img {
 .index {
 	padding: 0 75px;
 	background-color: none;
-	background: url('hero.png') no-repeat center center;
+	background: image-url("hero.png") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -148,7 +148,7 @@ section img {
 .donate {
 	padding: 30px 75px;
 	background-color: #444;
-	background: url('placeholder.jpg') no-repeat center center;
+	background: image-url("placeholder.jpg") no-repeat center center;
 	background-size: 100% auto;
 	height: 350px; 
 }
@@ -156,7 +156,7 @@ section img {
 .about {
 	padding: 30px 75px;
 	background-color: #444;
-	background: url('placeholder.jpg') no-repeat center center;
+	background: image-url("placeholder.jpg") no-repeat center center;
 	background-size: 100% auto;
 	height: 350px; 
 }
