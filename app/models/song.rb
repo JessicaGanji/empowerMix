@@ -7,6 +7,7 @@ class Song < ActiveRecord::Base
 	validates :year, presence: true
 
 	acts_as_votable
+
 	
 
 end

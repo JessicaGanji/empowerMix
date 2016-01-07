@@ -1,3 +1,4 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 $fill: #fff;
@@ -354,18 +355,36 @@ footer {
 	}
 }
 
-.spotify, .soundcloud, .facebook, .youtube, .instagram, .twitter {
+.edit, .delete, .spotify, .soundcloud, .facebook, .youtube, .instagram, .twitter, .like {
 	display: block;
 	width: 100%;
 	padding: 10px 0;
-	margin: 2px 0 0 0;
+	margin: 5px 0 0 0;
 	letter-spacing: 1.5px;
 	color:#fff;
 	font-size: 15px;
 	font-weight: 300;
 	text-align: center;
 	border: 0;
+
+	a:link, a:visited {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	a:hover, a:active {
+		text-decoration: none;
+		color: #fff;
+	}
 }
+
+.edit {
+	background: $primary-color;
+} 
+
+.delete {
+	background: red;
+} 
 
 .spotify {
 	background: #2CBF5F;
@@ -390,6 +409,11 @@ footer {
 .twitter {
 	background: #00aced;
 } 
+
+.like {
+	background: red;
+} 
+
 
 
 
