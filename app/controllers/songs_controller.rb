@@ -28,13 +28,10 @@ class SongsController < ApplicationController
 	def upvote 
 		@song = Song.find( params[:song_id] )
 		@song.upvote_by current_user
-		redirect_to :back
-	end  
 
-	def downvote
-		@song = Song.find( params[:song_id] )
-		@song.downvote_by current_user
-		redirect_to :back
+		if request.xhr?
+		# Rails.application.routes.recognize_path(request.referer)[:action]
+		# redirect_to :back
 	end
 
 	def new

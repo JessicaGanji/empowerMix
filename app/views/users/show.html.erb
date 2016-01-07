@@ -21,49 +21,43 @@
 
 		<% if @user.spotify_link.nil? %>
 		<% elsif @user.spotify_link.length > 0 %>
-			<section class="spotify">		
-			<a href="<%= @user.spotify_link %>" target="_blank"><img src="#"></a>
-			</section>
+			<a href="<%= @user.spotify_link %>" target="_blank">
+			<div class="spotify">Spotify</div></a>
 		<% else %>
 		<% end %>
 
 		<% if @user.soundcloud_link.nil? %>
 		<% elsif @user.soundcloud_link.length > 0 %>
-			<section class="soundcloud">		
-			<a href="<%= @user.soundcloud_link %>" target="_blank"><img src="#"></a>
-			</section>
+			<a href="<%= @user.soundcloud_link %>" target="_blank">
+			<div class="soundcloud" >SoundCloud</div></a>
 		<% else %>
 		<% end %>
 
 		<% if @user.facebook_link.nil? %>
-		<% elsif @user.facebook_link.length > 0 %>
-			<section class="facebook">		
-			<a href="<%= @user.facebook_link %>" target="_blank"><img src="#"></a>
-			</section>
+		<% elsif @user.facebook_link.length > 0 %>	
+			<a href="<%= @user.facebook_link %>" target="_blank">
+			<div class="facebook">Facebook</div></a>
 		<% else %>
 		<% end %>
 
 		<% if @user.youtube_link.nil? %>
-		<% elsif @user.youtube_link.length > 0 %>
-			<section class="youtube">		
-			<a href="<%= @user.youtube_link %>" target="_blank"><img src="#"></a>
-			</section>
+		<% elsif @user.youtube_link.length > 0 %>	
+			<a href="<%= @user.youtube_link %>" target="_blank">
+			<div class="youtube">Youtube</div></a>
 		<% else %>
 		<% end %>
 
 		<% if @user.instagram_link.nil? %>
-		<% elsif @user.instagram_link.length > 0 %>
-			<section class="instagram">		
-			<a href="<%= @user.instagram_link %>" target="_blank"><img src="#"></a>
-			</section>
+		<% elsif @user.instagram_link.length > 0 %>	
+			<a href="<%= @user.instagram_link %>" target="_blank">
+			<div class="instagram">Instagram</div></a>
 		<% else %>
 		<% end %>
 
 		<% if @user.twitter_link.nil? %>
-		<% elsif @user.twitter_link.length > 0 %>
-			<section class="twitter">		
-			<a href="<%= @user.twitter_link %>" target="_blank"><img src="#"></a>
-			</section>
+		<% elsif @user.twitter_link.length > 0 %>		
+			<a href="<%= @user.twitter_link %>" target="_blank">
+			<div class="twitter">Twitter</div></a>
 		<% else %>
 		<% end %>
 	</div> 

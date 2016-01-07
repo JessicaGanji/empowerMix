@@ -64,16 +64,9 @@
 
 	<div class="col-md-4">
 		<section class="part">
-			<%= link_to like_song_path(@song), method: :patch do %>
-			  Upvote
-			  <%= @song.get_upvotes.size %>
-			<% end %>
 
-			<hr>
+		<%= render 'like' %>
 
-			<p><% @song.votes_for.voters.each do |s| %>
-				<%= link_to '@'+s.username, user_path(s.id) %>,
-			<% end %></p>
 		</section>
 
 		<div class="view_button"><%= link_to "Next: It's a Surprise!", view_song_path(@random) %></div> 

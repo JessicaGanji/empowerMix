@@ -1,0 +1,10 @@
+<%= link_to like_song_path(@song), method: :patch, remote: true do %>
+  Upvote
+  <%= @song.get_upvotes.size %>
+<% end %>			
+
+<hr>
+
+<p><% @song.votes_for.voters.each do |s| %>
+	<%= link_to '@'+s.username, user_path(s.id) %>,
+<% end %></p>

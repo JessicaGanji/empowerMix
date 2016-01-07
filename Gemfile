@@ -5,6 +5,11 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'paperclip'
 
+ruby '2.2.1'
+group :production do
+  gem 'rails_12factor'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
