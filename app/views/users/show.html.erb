@@ -41,9 +41,8 @@
 		<% else %>
 		<% end %>
 
-		<hr>
-
 		<% if current_user == @user %>
+			<hr>
 			<div class="edit"><%= link_to 'Edit Profile', edit_user_path %></div>
 			<div class="delete"><%= link_to 'Delete Account', destroy_user_path, method: :delete %></div>
 		<% else %>

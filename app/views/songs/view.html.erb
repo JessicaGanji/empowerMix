@@ -48,7 +48,8 @@
 
 		<div class="view_button"><%= link_to 'Back to Library', library_path %></div> 
 
-		<% if @current_user == @user_id %>
+		<%# raise current_user %>
+		<% if current_user == @user_id %>
 			<section class="part">
 				<p>YouTube Link: <a href="<%= @song.link %>"><%= @song.link %></a></p>
 				<p>Updated on <%= @user_id.updated_at.strftime("%b %d, %Y") %></p>	
@@ -111,11 +112,11 @@
 		<div class="view_button"><%= link_to 'Next: '+ @random.title, view_song_path(@random) %></div> 
 
 		<section class="part">
-			<p>SONG-RANDOM FEATURED ARTIST Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</section>
 
 		<section class="part">
-			<p>SONG-AD Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		</section>
 	</div> 
 </section>
