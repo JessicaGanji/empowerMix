@@ -78,6 +78,10 @@ body {
 		color: $secondary-color;
 	}
 
+	label {
+		font-weight: 400;
+	}
+
 }
 
 
@@ -417,7 +421,11 @@ footer {
 } 
 
 
-
+.glyphicon-headphones, .glyphicon-music, .glyphicon-fire {
+	font-size: 50px;
+	color: #444;
+	margin: 15px 0;
+}
 
 
 

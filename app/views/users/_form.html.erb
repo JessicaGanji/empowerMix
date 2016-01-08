@@ -31,7 +31,7 @@
 	</section>
 
 	<section class='part'>
-	<h3><%= f.label :password_confirmation %></h3>
+	<h3><%= f.label :password_confirmation, 'Password Conformation' %></h3>
 	<%= f.password_field :password_confirmation, class: 'text_field' %>
 	</section>
 
@@ -73,26 +73,28 @@
 	</section>
 
 	<section class='part'>
-	<h3>Social</h3>
+	<h3>Social</h3><br>
 
 	<h5><%= f.label :spotify_link, 'Spotify URL' %></h5>
-	<%= f.text_field :spotify_link, class: 'text_field' %>
+	<%= f.text_field :spotify_link, class: 'text_field', placeholder: 'http://' %><br><br>
 
 	<h5><%= f.label :soundcloud_link, 'SoundCloud URL' %></h5>
-	<%= f.text_field :soundcloud_link, class: 'text_field' %>
+	<%= f.text_field :soundcloud_link, class: 'text_field', placeholder: 'http://' %><br><br>
 
 	<h5><%= f.label :facebook_link, 'Facebook URL' %></h5>
-	<%= f.text_field :facebook_link, class: 'text_field' %>
+	<%= f.text_field :facebook_link, class: 'text_field', placeholder: 'http://' %><br><br>
 
 	<h5><%= f.label :youtube_link, 'Youtube URL' %></h5>
-	<%= f.text_field :youtube_link, class: 'text_field' %>
+	<%= f.text_field :youtube_link, class: 'text_field', placeholder: 'http://' %><br><br>
 
 	<h5><%= f.label :instagram_link, 'Instagram URL' %></h5>
-	<%= f.text_field :instagram_link, class: 'text_field' %>
+	<%= f.text_field :instagram_link, class: 'text_field', placeholder: 'http://' %><br><br>
 
 	<h5><%= f.label :twitter_link, 'Twitter URL' %></h5>
-	<%= f.text_field :twitter_link, class: 'text_field' %>
+	<%= f.text_field :twitter_link, class: 'text_field', placeholder: 'http://' %>
 	</section>
+
+	<%= render 'error_messages' %>
 
 	<%= f.submit class: 'button' %>
 

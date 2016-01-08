@@ -23,7 +23,7 @@
 			<p class="text"><%= @song.description %></p>
 			<p><em><%= @song.genre %></em></p>
 			<hr><h4>Share</h4>
-			<%= social_share_button_tag(@song.title) %>
+			<%= social_share_button_tag( "Listening to "+ @song.artist + "'s " + @song.title + " on #EmpowerMIX", :url => "http://EmpowerMIX.com/", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page", via: "EmpowerMIX" )%>
 		</section>
 
 		<% if @song.lyrics.nil? %>
@@ -48,14 +48,15 @@
 
 		<div class="view_button"><%= link_to 'Back to Library', library_path %></div> 
 
-		<section class="part">
-			<% if @current_user == @user %>
+		<% if @current_user == @user_id %>
+			<section class="part">
 				<p>YouTube Link: <a href="<%= @song.link %>"><%= @song.link %></a></p>
 				<p>Updated on <%= @user_id.updated_at.strftime("%b %d, %Y") %></p>	
 				<%= link_to '[ Edit ]', user_song_path(@song.user_id, @song.id) %> 
 				<%= link_to '[ Delete ]', destroy_song_path(@song.user_id, @song.id), method: :delete %>  
-			<% end %>
-		</section>
+			</section>
+		<% end %>
+
 	</div> 
 
 
