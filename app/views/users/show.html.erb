@@ -1,7 +1,11 @@
 <section class="row background">
 	<div class="col-md-4">
 		<section class="part">
-			<%= image_tag @user.image.url(:large) %>
+			<% if @user.image.url == "/images/original/missing.png" %>
+				<img src="/images/avatar.png">
+			<% else %>
+				<%= image_tag @user.image.url(:large) %>
+			<% end %>
 		</section>
 
 		<% if @user.spotify_link.nil? %>
