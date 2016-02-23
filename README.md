@@ -16,12 +16,34 @@ If you fork this repo, you must run `bundle install` and `rake db:migrate` in or
 * PostgreSQL Database
 * Rails 4.2.5 (Gem)
 * Bcrypt (Gem)
-* Bootstrap-SASS (Gem)
 * Paperclip (Gem)
 * Acts As Votable (Gem)
 * Social Share Button (Gem)
-* Custom CSS/SaSS
+* Bootstrap-SASS (Gem)
+* Custom CSS3/SaSS
 * Adobe Creative Cloud (Photoshop + Illustrator)
+
+-
+
+#### Screenshots
+
+![Sign Up Link](app/assets/images/readme/index.png)
+
+##### Sign Up
+
+![Sign Up Link](app/assets/images/readme/signup.png)
+
+##### User Profile
+
+![Sign Up Link](app/assets/images/readme/profile.png)
+
+##### Music Library
+
+![Sign Up Link](app/assets/images/readme/library.png)
+
+##### About
+
+![Sign Up Link](app/assets/images/readme/about.png)
 
 -
 
@@ -43,26 +65,4 @@ If you fork this repo, you must run `bundle install` and `rake db:migrate` in or
 
 #### Wireframes
 
-![ EmpowerMix Erb ](app/assets/images/readme/wireframes.png)
-
--
-
-### Snapshots
-
-![Sign Up Link](app/assets/images/readme/index.png)
-
-##### Sign Up
-
-![Sign Up Link](app/assets/images/readme/signup.png)
-
-##### User Profile
-
-![Sign Up Link](app/assets/images/readme/profile.png)
-
-##### Music Library
-
-![Sign Up Link](app/assets/images/readme/library.png)
-
-##### About
-
-![Sign Up Link](app/assets/images/readme/about.png)
+![ EmpowerMix Erb ](app/assets/images/readme/erb.png)
