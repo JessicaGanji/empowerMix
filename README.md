@@ -1,71 +1,68 @@
-# EmpowerMIX
+# EmpowerMIX 
 
-When the patriarchy's got you down... turn up your empowerMIX. 
-
-#### Technologies Used
-
-* Ruby 2.2.1
-
-* Rails 4.2.5
-
-* PostgreSQL Database
-
-* Bootstrap-SASS ~> 3.3.4 (Gem)
-
-* Acts As Votable, '~> 0.10.0' (Gem)
-
-* Paperclip (Gem)
-
-* Social Share Button (Gem)
-
-#### Visit EmpowerMIX
-
-[EmpowerMIX on Heroku](https://empowermix.herokuapp.com/)
-
-#### Welcome
+When the patriarchy's got you down, turn up your EmpowerMIX!
 
 If you fork this repo, you must run `bundle install` and `rake db:migrate` in order for the app to function properly.
 
-![Sign Up Link](app/assets/images/index.png)
+[Visit EmpowerMIX on Heroku](https://empowermix.herokuapp.com/)
 
-#### Sign Up
+##### Inspired by: ["Measuring Up As Men: Mobilizing To End Child Marriage In Kenya"](https://www.youtube.com/watch?v=Nb--b4l_OZ8)
 
-![Sign Up Link](app/assets/images/signup.png)
+-
 
-#### Log In
+### Technologies Used
 
-![Sign Up Link](app/assets/images/login.png)
+* Ruby 2.2.1
+* PostgreSQL Database
+* Rails 4.2.5 (Gem)
+* Bcrypt (Gem)
+* Bootstrap-SASS (Gem)
+* Paperclip (Gem)
+* Acts As Votable (Gem)
+* Social Share Button (Gem)
+* Custom CSS/SaSS
+* Adobe Creative Cloud (Photoshop + Illustrator)
 
-#### User Profile
+-
 
-![Sign Up Link](app/assets/images/profile.png)
+#### User Stories
 
-#### Users
+| Role ("As a..") | Context ("When I..") | Goal ("I want to..") | Benefit/Purpose ("So that I can..") |
+|-----------------|----------------------|:--------------------:|:-----------------------------------:|
+| Contributor | add a new song | use a youtube video | upload a video |
+| Contributor | add a new song | use a youtube video | upload a video |
+| Contributor | add a new song | use a youtube video | upload a video |
 
-![Sign Up Link](app/assets/images/users.png)
+-
 
-#### Music Library
+#### ERD
 
-![Sign Up Link](app/assets/images/library.png)
+![ EmpowerMix Erb ](app/assets/images/erb.png)
 
-#### About
-
-![Sign Up Link](app/assets/images/about.png)
-
+-
 
 #### Wireframes
 
+![ EmpowerMix Erb ](app/assets/images/wireframes.png)
 
-![EmpowerMIX Wireframe](app/assets/images/wf_01.JPG)
+-
 
-![EmpowerMIX Wireframe](app/assets/images/wf_02.JPG)
+### Snapshots
 
-![EmpowerMIX Wireframe](app/assets/images/wf_03.JPG)
+![Sign Up Link](app/assets/images/index.png)
 
-![EmpowerMIX Wireframe](app/assets/images/wf_04.JPG)
+##### Sign Up
 
-![EmpowerMIX Wireframe](app/assets/images/wf_05.JPG)
+![Sign Up Link](app/assets/images/signup.png)
 
+##### User Profile
 
+![Sign Up Link](app/assets/images/profile.png)
 
+##### Music Library
 
+![Sign Up Link](app/assets/images/library.png)
+
+##### About
+
+![Sign Up Link](app/assets/images/about.png)
