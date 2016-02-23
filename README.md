@@ -37,32 +37,32 @@ If you fork this repo, you must run `bundle install` and `rake db:migrate` in or
 
 #### ERD
 
-![ EmpowerMix Erb ](app/assets/images/erb.png)
+![ EmpowerMix Erb ](app/assets/images/readme/erb.png)
 
 -
 
 #### Wireframes
 
-![ EmpowerMix Erb ](app/assets/images/wireframes.png)
+![ EmpowerMix Erb ](app/assets/images/readme/wireframes.png)
 
 -
 
 ### Snapshots
 
-![Sign Up Link](app/assets/images/index.png)
+![Sign Up Link](app/assets/images/readme/index.png)
 
 ##### Sign Up
 
-![Sign Up Link](app/assets/images/signup.png)
+![Sign Up Link](app/assets/images/readme/signup.png)
 
 ##### User Profile
 
-![Sign Up Link](app/assets/images/profile.png)
+![Sign Up Link](app/assets/images/readme/profile.png)
 
 ##### Music Library
 
-![Sign Up Link](app/assets/images/library.png)
+![Sign Up Link](app/assets/images/readme/library.png)
 
 ##### About
 
-![Sign Up Link](app/assets/images/about.png)
+![Sign Up Link](app/assets/images/readme/about.png)
