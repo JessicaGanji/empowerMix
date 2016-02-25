@@ -9,24 +9,42 @@ $primary-color: #7d54df;
 $secondary-color: #8b67e2;
 
 /* Body */
-
 body {
 	padding: 0;
 	margin: 0;
-	font-family: "Open Sans", helvetica, sans-serif;
-	line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
 	letter-spacing: 1.25px; 
+	line-height: 1.5;
 	background-color: $primary-color;
-	background: image-url("gradient.png") no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+
+  /* SVG fallback for IE 9 (could be data URI, or could use filter) */
+  // background-image: url(fallback-gradient.svg); 
+
+  /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+  background-image:
+    -webkit-gradient(linear, left top, right top, from(#f9c7d4), to(#cf9fdb), to(#7d54df));
+  
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image:
+    -webkit-linear-gradient(left, #f9c7d4, #cf9fdb, #7d54df);
+
+  /* Firefox 3.6 - 15 */
+  background-image:
+    -moz-linear-gradient(left, #f9c7d4, #cf9fdb, #7d54df);
+
+  /* Opera 11.1 - 12 */
+  background-image:
+    -o-linear-gradient(left, #f9c7d4, #cf9fdb, #7d54df);
+
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image:
+    linear-gradient(to right, #f9c7d4, #cf9fdb, #7d54df);
 
 	h1, h2, h3, h4, h5 {
 		color: #444;
 		font-weight: 500;
-		padding:0;
+		padding: 0;
 		margin: 0;
 		line-height: 1.5;
 	}
@@ -86,7 +104,6 @@ body {
 
 
 /* Header */
-
 header {
 	padding: 30px 75px;
 
@@ -94,7 +111,7 @@ header {
 		
 		a:link, a:visited, a:hover, a:active {
 			font-size: 15px;
-			padding: 0 0 0 20px;
+			padding: 0;
 			color: $primary-color;
 		}
 	}
@@ -123,7 +140,6 @@ header {
 
 
 /* Main */
-
 section img {
 	width: 100%;
 }
@@ -139,14 +155,13 @@ section img {
 }
 
 .index {
-	padding: 0 75px;
+	padding: 0px 75px 30px 75px;
 	background-color: none;
-	background: image-url("hero.png") no-repeat top center;
+	background: image-url("hero-design.png") no-repeat top center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover; 
-	height: 550px;
 }
 
 .slider {
@@ -222,7 +237,6 @@ section img {
 
 
 /* Responsive Video */
-
 .video, .music {
 	background: $fill;
 	position: relative;
@@ -250,6 +264,7 @@ section img {
 footer {
 	background: $primary-color;
 	padding: 30px 75px;
+  text-align: center;
 
 	h3 {
 		color: #e8e8e8;
@@ -276,9 +291,6 @@ footer {
 	}
 }
 
-.top {
-	background: $secondary-color;
-}
 .bottom {
 	background: $secondary-color;
 }

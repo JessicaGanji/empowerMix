@@ -1,11 +1,9 @@
-<h3><%= link_to like_song_path(@song), method: :patch do %> <3 <% end %>  
-	
+<h3><%= link_to like_song_path(@song), method: :patch do %> <3 <% end %>
 	<% if @song.get_upvotes.size > 1 %>
 		<%= @song.get_upvotes.size %> Likes	
 	<% else %>
 		<%= @song.get_upvotes.size %> Like
 	<% end %>
-
 </h3>
 
 <% if @song.get_upvotes.size > 0 %>

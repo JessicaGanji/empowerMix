@@ -1,24 +1,20 @@
 <section class="row background">
-	<div class="col-md-8">
+	<div class="col-md-6 col-md-offset-3">
 
 		<section class='part'>
 			<h1>Log In</h1>
+
+      <%= form_tag login_path do %>
+          <h3><%= label_tag :email %></h3>
+          <%= text_field_tag :email, '', class: 'text_field' %>
+
+          <h3><%= label_tag :password %></h3>
+          <%= password_field_tag :password, '', class: 'text_field' %>
+          
+          <%= submit_tag "Log In", class: 'button' %>	
+      <% end %>
 		</section>
-
-		<%= form_tag login_path do %>
-			<section class='part'>
-				<h3><%= label_tag :email %></h3>
-				<%= text_field_tag :email, '', class: 'text_field' %>
-			</section>
-
-			<section class='part'>
-				<h3><%= label_tag :password %></h3>
-				<%= password_field_tag :password, '', class: 'text_field' %>
-			</section>
-
-			<%= submit_tag "Log In", class: 'button' %>	
-		<% end %>
-		
+    		
 	</div>
 </section>
 
