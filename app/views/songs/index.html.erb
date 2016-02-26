@@ -1,57 +1,5 @@
-<section class="row index">
-	<div class="col-md-12">
-    <section class="video">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Nb--b4l_OZ8?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
-      <h2>Listen</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>    
-    </section>	
-  </div>
-</section>
-
-<section class="row breakdown">
-	<div class="col-md-4">
-    <span class="glyphicon glyphicon-headphones"></span>
-    <h2>Listen</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</div>
-
-	<div class="col-md-4">
-    <span class="glyphicon glyphicon-music"></span>
-    <h2>Contribute</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</div>
-
-	<div class="col-md-4">
-    <span class="glyphicon glyphicon-fire"></span>
-    <h2>Empower</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</div>
-</section>
-
-<!--Charities-->
-<section class="row donate">
-	<div class="col-md-12">
-		<h2>Creative Header for Charity Section</h2>
-		<h5><a href="http://shotatlife.org/donate/" target=“_blank”>The United Nations Foundation’s Shot@Life</a>, <a href="http://www.psi.org" target=“_blank”>Population Services International</a>,<br> <a href="http://www.tostan.org" target=“_blank”>Tostan</a>, <a href="http://www.heifer.org" target=“_blank”>Heifer International</a> and <a href="http://www.girlsnotbrides.org" target=“_blank”>Girls Not Brides</a></h5>
-		<% link_to 'Read More', about_path %>
-	</div>
-</section>
-
-<!--Timeline -->
-<section class="row blank">
-	<div class="col-md-12">
-		<h2>Music Library</h2>
-		<% @songs.each do |song| %>
-			<h3><%= song.year %> - 
-			<%= link_to song.title, view_song_path(song) %> 
-			by <%= song.artist %></h3>
-		<% end %>
-	</div>
-</section>
-
 <!--Slider-->
-<section class="row slider">
-  <div class="col-md-12">
+<section class="slider">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -101,12 +49,73 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  </div>
 </section>
 
+
 <section class="row breakdown">
-	<div class="col-md-8 col-md-offset-2">
+	<div class="col-md-4">
+    <span class="glyphicon glyphicon-headphones"></span>
     <h2>Listen</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 	</div>
+
+	<div class="col-md-4">
+    <span class="glyphicon glyphicon-music"></span>
+    <h2>Contribute</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+
+	<div class="col-md-4">
+    <span class="glyphicon glyphicon-fire"></span>
+    <h2>Empower</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+</section>
+
+<section class="row index">
+	<div class="col-md-8">
+    <section class="video">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Nb--b4l_OZ8?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+    </section>	
+  </div>
+	<div class="col-md-4">
+      <h2>Listen</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>    
+  </div>
+</section>
+
+<!--Timeline -->
+<section class="row blank">
+	<div class="col-md-4">
+		<h2>Music Library</h2>
+	</div>
+
+	<div class="col-md-8">
+		<h2>Music Library</h2>
+		<% @songs.each do |song| %>
+			<h3><%= song.year %> - 
+			<%= link_to song.title, view_song_path(song) %> 
+			by <%= song.artist %></h3>
+		<% end %>
+	</div>
+</section>
+
+<!--Charities-->
+<section class="row">
+	<a href="http://shotatlife.org/donate/" target=“_blank”><div class="col-md-3 donate-01">
+		The United Nations Foundation’s Shot@Life
+	</div></a>
+  
+  <a href="http://www.psi.org" target=“_blank”><div class="col-md-3 donate-02">
+    Population Services International
+	</div></a>
+
+	<a href="http://www.tostan.org" target=“_blank”>
+  <div class="col-md-3 donate-03">
+    Tostan
+	</div></a>
+
+	<a href="http://www.girlsnotbrides.org" target=“_blank”><div class="col-md-3 donate-04">
+    Girls Not Brides
+	</div></a>
 </section>
