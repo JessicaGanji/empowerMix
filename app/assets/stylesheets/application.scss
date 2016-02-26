@@ -108,16 +108,20 @@ header {
 	padding: 20px 75px;
 
 	.logo {
-		
-		a:link, a:visited, a:hover, a:active {
-			font-size: 15px;
-			padding: 0;
+    // background-color:red;
+		padding: 5px 0;
+    font-weight: 600;     		
+    
+    a:link, a:visited, a:hover, a:active {
+			font-size: 14px;
 			color: $primary-color;
+
 		}
 	}
 
 	nav {
 	text-align: right;
+  // background-color: blue;
 
 		ul {
 			list-style: none;
@@ -126,7 +130,7 @@ header {
 		}
 
 		li {
-			font-size: 15px;
+			font-size: 14px;
 			display: inline-block;
 			padding: 0 0 0 20px;
 			margin: 0;
@@ -162,7 +166,7 @@ section img {
 }
 
 .index {
-	padding: 30px 75px 0 75px;
+	padding: 45px 75px 15px 75px;
   // background-color: rgba(255,255,255,.25);
 	// background: image-url("hero-design.png") no-repeat top center;
 	// -webkit-background-size: cover;
@@ -177,19 +181,19 @@ section img {
 }
 
 .donate-01{
-  background: image-url("donate.jpg") no-repeat center center;
+  background: image-url("donate.jpg") center center;
 }
 
 .donate-02{
-  background: image-url("donate.jpg") no-repeat center center;
+  background: image-url("donate.jpg") center center;
 }
 
 .donate-03{
-  background: image-url("donate.jpg") no-repeat center center;
+  background: image-url("donate.jpg") center center;
 }
 
 .donate-04{
-  background: image-url("donate.jpg") no-repeat center center;
+  background: image-url("donate.jpg") center center;
 }
 
 .donate-01, .donate-02, .donate-03, .donate-04 {

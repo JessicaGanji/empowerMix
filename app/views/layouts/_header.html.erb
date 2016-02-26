@@ -13,8 +13,8 @@
         <li><%= link_to '@'+ current_user.username, user_path(current_user.id) %></li>
         <li><%= link_to 'Log Out', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
       <% else %>
-        <li><button><%= link_to 'SIGN UP', new_user_path %></button></li>
         <li><button><%= link_to 'LOG IN', login_path %></button></li>
+        <li><button><%= link_to 'SIGN UP', new_user_path %></button></li>
       <% end %>
     </ul>
   </nav>
