@@ -5,16 +5,16 @@
 
   <nav class="col-md-9">
     <ul>
-      <li><%= link_to 'Library', library_path %></li>
-      <li><%= link_to 'Contributors', users_path %></li>
-      <li><%= link_to 'About', about_path %></li>
+      <li><%= link_to 'MUSIC', library_path %></li>
+      <li><%= link_to 'CONTRIBUTORS', users_path %></li>
+      <li><%= link_to 'ABOUT', about_path %></li>
 
       <% if current_user %>
         <li><%= link_to '@'+ current_user.username, user_path(current_user.id) %></li>
         <li><%= link_to 'Log Out', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
       <% else %>
-        <li><button><%= link_to 'Sign Up', new_user_path %></button></li>
-        <li><button><%= link_to 'log In', login_path %></button></li>
+        <li><button><%= link_to 'SIGN UP', new_user_path %></button></li>
+        <li><button><%= link_to 'LOG IN', login_path %></button></li>
       <% end %>
     </ul>
   </nav>
